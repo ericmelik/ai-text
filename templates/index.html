@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyLlama Chat</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 TinyLlama Chat</h1>
+        <p class="subtitle">Ask me anything!</p>
+        
+        <!-- Chat messages will appear here -->
+        <div class="chat-container" id="chatContainer">
+            <div class="message bot-message">
+                Hello! I'm TinyLlama. What would you like to know?
+            </div>
+        </div>
+        
+        <!-- Input section for user questions -->
+        <div class="input-container">
+            <input 
+                type="text" 
+                id="questionInput" 
+                placeholder="Type your question here..."
+                onkeypress="if(event.key === 'Enter') askQuestion()"
+            >
+            <button onclick="askQuestion()" id="askButton">Send</button>
+        </div>
+        
+        <!-- Link to API documentation -->
+        <div class="api-link">
+            <a href="/docs" target="_blank">View API Documentation</a>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="/static/script.js"></script>
+</body>
+</html>

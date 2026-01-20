@@ -1,0 +1,178 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling - creates the purple gradient background */
+body {
+    /* Use system fonts for better native look on each OS */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    /* Create a diagonal gradient from purple-blue to purple */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Ensure body takes at least full viewport height */
+    min-height: 100vh;
+    /* Center content horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add padding around edges */
+    padding: 20px;
+}
+
+/* Main container that holds all chat interface elements */
+.container {
+    /* White background for the chat interface */
+    background: white;
+    /* Rounded corners */
+    border-radius: 20px;
+    /* Add shadow for depth effect */
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    /* Maximum width to keep it readable */
+    max-width: 800px;
+    /* Take full width up to max-width */
+    width: 100%;
+    /* Internal spacing */
+    padding: 40px;
+}
+
+/* Main heading style */
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+/* Subtitle text under the heading */
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Container for chat messages */
+.chat-container {
+    /* Light gray background */
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Minimum height to prevent it from being too small */
+    min-height: 300px;
+    /* Maximum height before scrolling kicks in */
+    max-height: 400px;
+    /* Enable vertical scrolling when content exceeds max-height */
+    overflow-y: auto;
+}
+
+/* Individual message bubble style */
+.message {
+    margin-bottom: 15px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    /* Prevent messages from taking full width */
+    max-width: 80%;
+}
+
+/* User's messages - aligned to the right, purple background */
+.user-message {
+    background: #667eea;
+    color: white;
+    /* Push to the right side */
+    margin-left: auto;
+    text-align: right;
+}
+
+/* Bot's messages - aligned to the left, white background */
+.bot-message {
+    background: white;
+    color: #333;
+    /* Add subtle border */
+    border: 1px solid #e0e0e0;
+}
+
+/* Container for input field and send button */
+.input-container {
+    /* Use flexbox for horizontal layout */
+    display: flex;
+    /* Space between input and button */
+    gap: 10px;
+}
+
+/* Text input field */
+input {
+    /* Take up remaining space */
+    flex: 1;
+    padding: 15px;
+    /* Light gray border */
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    /* Smooth transition when border color changes */
+    transition: border-color 0.3s;
+}
+
+/* Input field when focused (clicked/selected) */
+input:focus {
+    /* Remove default browser outline */
+    outline: none;
+    /* Change border to purple */
+    border-color: #667eea;
+}
+
+/* Send button style */
+button {
+    padding: 15px 30px;
+    /* Purple background matching theme */
+    background: #667eea;
+    color: white;
+    /* Remove default button border */
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    /* Show pointer cursor on hover */
+    cursor: pointer;
+    /* Smooth transition for background color */
+    transition: background 0.3s;
+}
+
+/* Button hover effect - slightly darker purple */
+button:hover {
+    background: #5568d3;
+}
+
+/* Disabled button style (when loading) */
+button:disabled {
+    /* Gray background */
+    background: #ccc;
+    /* Show not-allowed cursor */
+    cursor: not-allowed;
+}
+
+/* Loading message style (while waiting for response) */
+.loading {
+    color: #666;
+    /* Italic text to show it's temporary */
+    font-style: italic;
+}
+
+/* Link to API documentation */
+.api-link {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Style for the actual link */
+.api-link a {
+    color: #667eea;
+    /* Remove underline by default */
+    text-decoration: none;
+}
+
+/* Link hover effect - add underline */
+.api-link a:hover {
+    text-decoration: underline;
+}
