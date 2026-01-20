@@ -239,12 +239,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Hugging Face](https://huggingface.co/) for the Transformers library
 - [FastAPI](https://fastapi.tiangolo.com/) for the excellent web framework
 
-## 📧 Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - your.email@example.com
-
-Project Link: [https://github.com/yourusername/tinyllama-chat](https://github.com/yourusername/tinyllama-chat)
-
 ---
 
 ⭐ If you found this project helpful, please give it a star!
